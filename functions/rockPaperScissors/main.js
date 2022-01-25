@@ -1,7 +1,7 @@
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
 
-    if(["rock", "paper", "scissors"].includes(userInput)) {return userInput} else {return "Not Correct"}
+    if(["rock", "paper", "scissors"].includes(userInput)) {return userInput} else {return "Invalid Input"}
   }
   
   const getComputerChoice = function() {
@@ -16,7 +16,7 @@ const getUserChoice = (userInput) => {
   
       case 2:
       return "scissors"
-    }
+w    }
   
   }
 
@@ -41,4 +41,4 @@ const getUserChoice = (userInput) => {
     console.log(determineWinner(userInputData, computerInputData))
   }
   
-playGame("rocl")
+playGame("rock")
