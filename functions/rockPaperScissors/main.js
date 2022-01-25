@@ -1,20 +1,7 @@
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
 
-    switch (userInput) {
-        case "rock":
-        return userInput;
-
-        case "scissors":
-        return userInput;
-
-        case "paper":
-        return userInput;
-
-        default:
-        return "Not Correct"
-
-    }
+    if(["rock", "paper", "scissors"].includes(userInput)) {return userInput} else {return "Not Correct"}
   }
   
   const getComputerChoice = function() {
