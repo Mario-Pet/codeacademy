@@ -8,14 +8,25 @@ let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
 
 const storyWords = story.split(" ") // spliting all words into an array
-console.log(storyWords.length) // length of array
+// console.log(`words: ${storyWords.length}`) // length of array of words
 
 const betterWords = storyWords.filter(word => {return !unnecessaryWords.includes(word)}) // filters out the paragraph from the unnecessary words
 
 const overusedWordsCounter = {"really": 0, "very": 0, "basically": 0}
-console.log(storyWords.filter(word => {if(overusedWords.includes(word)) {overusedWordsCounter[word] += 1}})) // counts the words from the overusedWords array
+// console.log(storyWords.filter(word => {if(overusedWords.includes(word)) {overusedWordsCounter[word] += 1}})) // counts the words from the overusedWords array
+// console.log(overusedWordsCounter) // overused words
 
 let sentenceCounter = 0;
-const sentences = story.split(".").join(';').split('!').join(';').split(';').forEach(sentenceCounter++)
+const sentences = story.split(".").join(';').split('!').join(';').split(';').forEach(() => {sentenceCounter++}) 
+// console.log(sentenceCounter) // displays sentences
 
-console.log(sentenceCounter)
+const logging = () => {
+    console.log(`words: ${storyWords.length}, sentences: ${sentenceCounter}`)
+    storyWords.filter(word => {if(overusedWords.includes(word)) {overusedWordsCounter[word] += 1}})
+    console.log(overusedWordsCounter)
+    console.log(`better words: ${betterWords}`)
+}
+
+    
+
+logging()
